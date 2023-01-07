@@ -1,0 +1,34 @@
+body{
+    background-color: rgba(6, 6, 242, 0.686);
+    font: normal 15pt Arial;
+}
+
+header{
+    /*cor da letra*/
+    color: white;
+    /*centralizando o texto*/
+    text-align: center;
+}
+
+section{
+    /*fundo*/
+    background-color: white;
+    /*borda arredondada*/
+    border-radius: 10px;
+    /*espaço 'entre'*/
+    padding: 15px;
+    /*largura fixa*/
+    width: 500px;
+    /*centralizar*/
+    margin: auto;
+    /*sombra na caixa*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.375);
+
+}
+
+footer{
+    /*centralizando o texto*/
+    text-align: center;
+    /*deixando a fonte em italico*/
+    font-style: italic;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>exercicio 01</title>
+    <style>
+        /*acrescentando CSS no meu código*/
+        body{
+            background-color: aqua;
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Ja me livrei da maldição!</p>
+    <script>
+       
+       /*
+       Dessa forma ele esta vai armazenar dentro da variavel como uma string 
+       var n1 = window.prompt("Digite um número: ") //recebe string
+       var n2 = window.prompt("Digite outro número: ") //recebe string
+
+       nesse cado temos que tomar muito cuidado pois o window.prompot 
+       ele retorna uma string e por isso quando formos fazer algum tipo 
+       de formula matematica, temos que garantir que essa coleta de dados
+        estão com o seu tipo de variavel de forma correta.
+       */
+
+      /*
+      Como converter uma string para um número:
+      
+      Number.parseInt(numero) *passa para um número inteiro*
+      Number.parseFloat(numero) *passa para um número real*
+      Number(numero)*modo simplificado*
+      */
+       var n1 = Number.parseFloat(window.prompt("Digite um número: ")) //recebe number
+       var n2 = Number(window.prompt("Digite outro número: ")) //recebe number
+       var soma = n1 + n2
+       window.alert("a soma desses dois numeros é: " + soma)
+       window.alert(`"a soma desses dois numeros é: ${soma}`)
+
+
+       //number + number para adição 
+       //string + string para concatenação  
+       /*
+       como converter um numero para uma string 
+       
+       String(numero)
+       numero.toString()
+       */
+    </script>
+</body>
+</html>

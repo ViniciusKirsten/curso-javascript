@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <!--chamando o meu CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Ano de Nascimento:
+                <input type="number" name="txtano" id="txtano" min="0">
+            </p>
+            <p>Sexo:
+                <!--se no meu "name" do "input" 1 e 2 estiver com nomes diferentes
+                quando eu executar o código ele vai marcar ambos se eu 
+                selecionar, porém, se eu deixar com o mesmo nome ambos, 
+                ele vai selecionar somente um.-->
+                <input type="radio" name="radsex" id="mas" checked>
+                <label for="masc">Masculino</label>
+                <input type="radio" name="radsex" id="fem" checked>
+                <label for="fem">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="verificar" onclick="verificar()">
+            </p>
+        </div>
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; vini_kirsten</p>
+    </footer>
+
+    <!--
+    CRIANDO UM SCRIPT SEPARADO DO HTML
+    (script.js): é o nome do meu arquivo que ele vai buscar em outra pagina.
+    -->
+    <script src="script.js"></script>
+
+</body>
+</html>

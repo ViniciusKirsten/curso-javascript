@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#area{
+            font: normal 20pt Arial;
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--buscando do html
+
+    <div id="area"  onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        interaja...
+    </div>
+    -->
+
+    <!--buscando direto do JS com addEventListener-->
+    <div id="area">
+        interaja...
+    </div>
+
+    <script>
+        //ADICIONANDO EVENTOS BUSCANDO DO JS
+        /* 
+        Essa função vai disparar somente quando eu chamar ela 
+       
+        Nesse código atual ela somente vai executar quando eu clicar na div area
+        */
+        function clicar(){
+            var a = window.document.getElementById('area')
+            a.innerText = 'clicou!'
+            //mudando o meu style
+            a.style.background ='red'
+        }
+
+        //Função vai ser chamada quando eu estiver com o mouse dentro dela
+        function entrar(){
+            var a = window.document.getElementById('area')
+            a.innerText = 'entrou!'
+        }
+
+        //função vai ser chamada quando o mouse sair de dentro dela
+        function sair(){
+            window.document.getElementById('area').innerText = 'saiu'
+        }
+
+        //ADICIONANDO EVENTOS DIRETO DO JS COM 'OUVIDORES/MONITORES'
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+    </script>
+</body>
+</html>

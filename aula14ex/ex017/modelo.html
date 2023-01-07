@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <!--chamando o meu CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Número: <input type="number" name="num" id="txtn">
+            <input type="button" value="Gerar tabuada" onclick="tabuada()"></p>
+        </div>
+        <div>
+            <!--size seria o tamanho da caixa por quantidade de itens-->
+            <select name="tabuada" id="seltab" size="10">
+                <!--adicionando um item a minha lista
+                todo option tem que ter um valor
+                <option value="valor">nome do item</option>-->
+                <option>Digite um número acima</option>
+            </select>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; vini_kirsten</p>
+    </footer>
+
+    <!--
+    CRIANDO UM SCRIPT SEPARADO DO HTML
+    (script.js): é o nome do meu arquivo que ele vai buscar em outra pagina.
+    -->
+    <script src="script.js"></script>
+
+</body>
+</html>

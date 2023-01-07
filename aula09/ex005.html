@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: aqua;
+            color: black;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Primeiros passos com DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">clique em mim</div>
+    <!--
+        CASO FOR USAR ALGUMA SELEÇÃO POR CLASS
+        <div class="esc">clique em mim</div>
+    -->
+
+    <script>
+    /*
+    window = primeira camada 
+    document = segunda camana(pois está dentro de window)
+    */
+    
+        window.document.write('Ola mundo.')
+
+        //mostrando o meu tipo de pontuação de texto UTF8
+        window.document.write('<br>'+window.document.charset)
+        
+        //mostrar o nome do navegador
+        window.document.write('<br>'+window.navigator.appName)
+    
+        /*SELECIONANDO ELEMENTOS POR MARCA*/
+    /*
+    Dentro das aspas simples ele vai adicionar a minha tag em HTML
+
+    E se eu não colocar os meu conchetes dentro fora selecionando o 
+    numero, ele vai selecionar todos os meus elementos de 'p' que esta
+    no exemplo 
+
+    A numeração sempre vai começar com zero sendo o primeiro dos elementos
+    */
+    var p1 = window.document.getElementsByTagName('p')[0]
+
+    //innerText é o texto que está dentro do meu ('p' '0')
+    window.document.write('<br> Esse é o resultado: ' + p1.innerText)
+    
+    //posso mudar os parametros da minha tag como por exemplo a cor do meu paragrafo 
+    p1.style.color = 'blue'
+
+    /*posso mudar mais coisas adiconando tags dentro de variaveis 
+    EX: mudar a cor de fundo */
+    var corpo = window.document.body
+    corpo.style.background = 'blue'
+
+    var p2 = window.document.getElementsByTagName('p')[1]
+    //primeira forma, ele não deixa o meu <strong> dentro do html
+    window.document.write('<br>Primeira forma: ' + p2.innerText)
+    //segunda forma, ele trás as tags que estão dentro do meu texto
+    window.document.write('<br>Segunda forma: ' + p2.innerHTML)
+
+        /*SELECIONANDO ELEMENTOS POR ID*/
+
+    //O element está no singular, por isso vai selecionar somente um id 
+    var d = window.document.getElementById('msg')
+    d.style.background = 'green'
+
+    //primeira forma 
+    d.innerText = 'Estou aguardando...'
+    //segunda forma 
+    window.document.getElementById('msg').innerText= 'Estou aguardando...'
+
+        /*SELECIONANDO POR NAME*/
+    var n = window.document.getElementsByName('msg')[0]
+    n.innerText = 'Estou aguardando...'
+    
+        /*SELECIONANDO POR CLASS*/
+    window.document.getElementsByClassName('esc')[0].innerText ='hello'
+        
+        /*SELECIONANDO POR SELETOR*/
+    //id = ( # ) class = ( . ), nesse caso eu seleciono minha div e o nome que ela tem.
+    
+    //id (hashtag)
+    var d = window.document.querySelector('div#msg')
+    
+    //class (ponto)
+    var d = window.document.querySelector('div.msg')
+    </script>
+</body>
+</html>

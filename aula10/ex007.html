@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*configurando meu corpo do site*/
+        body{
+            font: normal 15pt Arial;
+        }
+        /*configurando minhas caixas de texto*/
+        input{
+            font: normal 15pt Arial;
+            width: 100px;
+        }
+        /*configurando minha div*/
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <!--caixa de texto 1-->
+    <input type="number" name="txtn1" id="txtn1">
+    <!--adicionando um simbolo para identificar o que vamos fazer-->
+    +
+    <!--caixa de texto 2-->
+    <input type="number" name="tstn2" id="txtn2">
+    <!--botão-->
+    <input type="button" value="somar" onclick="somar()">
+    <!--criando o meu resultado-->
+    <div id="res">resultado</div>
+    <script>
+        function somar(){
+            //pegando os valores das caixas 
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res')
+
+            //mudando os valores que eu peguei da caixa, de string para number
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            
+            //soma dos meus números 
+            var soma = n1 + n2
+
+            //mudando o meu resultado 
+            res.innerHTML = `A soma entre ${n1} + ${n2} é igual a <strong>${soma}</strong>`
+        }
+    </script>
+</body>
+</html>
